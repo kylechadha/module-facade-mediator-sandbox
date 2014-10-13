@@ -1,4 +1,5 @@
 CORE.create_module('filters-bar', function(sb) {
+  
   var filters;
 
   return {
@@ -20,5 +21,6 @@ CORE.create_module('filters-bar', function(sb) {
       })
     }
 
-  }
-})
+  };
+
+});
