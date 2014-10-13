@@ -1,4 +1,4 @@
-CORE.create_module('shoping-cart', function(sb) {
+CORE.create_module('shopping-cart', function(sb) {
   
   var cart,
       cartItems;
