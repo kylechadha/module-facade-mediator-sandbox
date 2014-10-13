@@ -57,7 +57,7 @@ CORE.create_module('product-panel', function(sb) {
       query = query.toLowerCase();
 
       eachProduct(function(product) {
-        if (product.getAttribute('p')[0].innerHTML.toLowerCase().indexOf(query.toLowerCase()) < 0) {
+        if (product.getElementsByTagName('p')[0].innerHTML.toLowerCase().indexOf(query.toLowerCase()) < 0) {
           product.style.opacity = '0.2';
         }
       })
