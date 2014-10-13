@@ -51,11 +51,44 @@ CORE.create_module('product-panel', function(sb) {
 
     },
 
-    search: function(query) {},
+    search: function(query) {
 
-    change_filter: function(filter) {},
+      reset();
+      query = query.toLowerCase();
 
-    addToCart: function(e) {}
+      eachProduct(function(product) {
+        if (product.getAttribute('p')[0].innerHTML.toLowerCase().indexOf(query.toLowerCase()) < 0) {
+          product.style.opacity = '0.2';
+        }
+      })
+
+    },
+
+    change_filter: function(filter) {
+
+      reset();
+
+      eachProduct(function(product) {
+        if (product.getAttribute('data-8088-keyword').toLowerCase().indexOf(filter.toLowerCase()) < 0) {
+          product.style.opacity = '0.2';
+        }
+      });
+
+    },
+
+    addToCart: function(e) {
+
+      var li = e.currentTarget;
+      sb.notify({
+        type: 'add-item',
+        data: { 
+          id: li.id,
+          name: li.getElementsById('p')[0].innerHTML,
+          price: parseInt(li.id, 10)
+        }
+      })
+
+    }
 
   };
 
