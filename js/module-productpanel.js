@@ -81,7 +81,7 @@ CORE.create_module('product-panel', function(sb) {
       var li = e.currentTarget;
       sb.notify({
         type: 'add-item',
-        data: { 
+        data: {
           id: li.id,
           name: li.getElementsById('p')[0].innerHTML,
           price: parseInt(li.id, 10)
