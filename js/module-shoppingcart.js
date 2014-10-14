@@ -8,7 +8,7 @@ CORE.create_module('shopping-cart', function(sb) {
     init: function() {
 
       cart = sb.find('ul')[0];
-      carItems = {};
+      cartItems = {};
 
       sb.listen({
         'add-item': this.addItem
@@ -35,7 +35,7 @@ CORE.create_module('shopping-cart', function(sb) {
       }
       else {
         entry = sb.create_element('li', { 
-                  id: 'cart-' + product.id
+                  id: 'cart-' + product.id,
                   children:
                     [
                       sb.create_element('span', { 'class' : 'product_name', text : product.name }),

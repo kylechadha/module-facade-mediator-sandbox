@@ -6,7 +6,7 @@ CORE.create_module('product-panel', function(sb) {
     var i = 0,
         product;
 
-    for (i; product = product[i++]; ) {
+    for ( ; product = products[i++]; ) {
       fn(product);
     }
   }
@@ -83,7 +83,7 @@ CORE.create_module('product-panel', function(sb) {
         type: 'add-item',
         data: {
           id: li.id,
-          name: li.getElementsById('p')[0].innerHTML,
+          name: li.getElementsByTagName('p')[0].innerHTML,
           price: parseInt(li.id, 10)
         }
       })

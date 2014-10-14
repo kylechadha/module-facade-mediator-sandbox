@@ -24,7 +24,7 @@ var CORE = (function() {
         // send to the server
       }
 
-    }
+    },
 
 
     // Module Management
