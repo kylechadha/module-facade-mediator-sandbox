@@ -1,4 +1,5 @@
 var Sandbox = {
+
   create: function(core, module_selector) {
 
     var CONTAINER = core.dom.query('#' + module_selector);
@@ -68,4 +69,5 @@ var Sandbox = {
     };
 
   }
+  
 };
